@@ -1,0 +1,19 @@
+{
+	"College Timetable": "جدول الكلية",
+	"RoomFilter": "تصفية حسب الغرفة",
+	"Monday": "الإثنين",
+    "Tuesday": "الثلاثاء",
+    "Wednesday": "الأربعاء",
+    "Thursday": "الخميس",
+    "Friday": "يوم الجمعة",
+	"Room": "مجال",
+	"Lecturer": "محاضر",
+	"Hours": "ساعات",
+	"AI and deep learning": "منظمة العفو الدولية والتعلم العميق",
+	"Enterpirse Application Development 2": "تطوير تطبيقات المؤسسات 2",
+	"Computation Theory": "نظرية الحوسبة",
+	"Algorithms & Computation": "الخوارزميات والحساب",
+	"Public Cloud Architecture": "سحابة العمارة العامة",
+	"Games Development": "تطوير الألعاب",
+	"Filter by day": "تصفية حسب اليوم"
+}

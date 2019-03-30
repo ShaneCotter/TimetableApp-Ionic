@@ -1,0 +1,19 @@
+{
+	"College Timetable": "Horario Universidad",
+	"RoomFilter": "Filtrar por habtación",
+	"Monday": "Lunes",
+    "Tuesday": "Martes",
+    "Wednesday": "Miércoles",
+    "Thursday": "Jueves",
+    "Friday": "Viernes",
+	"Room": "Habtación",
+	"Lecturer": "Conferencista",
+	"Hours": "Hora(s)",
+	"AI and deep learning": "Inteligencia Artificial y Aprendizaje Profundo.",
+	"Enterpirse Application Development 2": "Desarrollo de aplicaciones Enterpirse 2",
+	"Computation Theory": "Teoría de la computación",
+	"Algorithms & Computation": "Algoritos y computación",
+	"Public Cloud Architecture": "Arquitectura de nube pública",
+	"Games Development": "Desarrollo de juegos",
+	"Filter by day": "Filtrar por dia"
+}

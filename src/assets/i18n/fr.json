@@ -1,0 +1,19 @@
+{
+	"College Timetable": "Horaires du collège",
+	"RoomFilter": "Filtrer par pièce",
+	"Monday": "Lundi",
+    "Tuesday": "Mardi",
+    "Wednesday": "Mercredi",
+    "Thursday": "Jeudi",
+    "Friday": "Vendredi",
+	"Room": "Pièce",
+	"Lecturer": "Maître de conférences",
+	"Hours": "Heure(s)",
+	"AI and deep learning": "IA et apprentissage en profondeur",
+	"Enterpirse Application Development 2": "Développement d'applications d'entreprise 2",
+	"Computation Theory": "Théorie du calcul",
+	"Algorithms & Computation": "Algorithmes et calcul",
+	"Public Cloud Architecture": "Architecture de cloud public",
+	"Games Development": "Développement de jeux",
+	"Filter by day": "Filtrer par jour"
+}

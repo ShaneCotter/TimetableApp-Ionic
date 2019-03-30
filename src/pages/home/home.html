@@ -1,0 +1,75 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title> {{ 'College Timetable' | translate }} <ion-icon name="school"></ion-icon></ion-title>
+    <ion-select style = "float: right;" [(ngModel)]="languageSelected" (ionChange)="setLanguage()">
+  	   <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.name}}</ion-option>
+  	</ion-select>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="viewByDay">
+
+	<button ion-button class="viewButton" (tap)="changeView()"> {{ 'RoomFilter' | translate }} </button>
+	<h1 class="page-title" *ngIf="modulesByDay">
+		<ion-icon name="arrow-back" (tap)="getPreviousDay()" class="arrow-left"></ion-icon>
+		{{ modulesByDay[0].day | translate }}
+		<ion-icon name="arrow-forward" (tap)="getNextDay()" class="arrow-right"></ion-icon>
+	</h1>
+	<ion-list>
+		<ion-item *ngFor="let module of modulesByDay">
+			<ion-card text-wrap>
+				<ion-grid>
+					<ion-row class="module-title">
+						<ion-col size=10>
+							<h1>{{ module.time}} <span class="duration">{{ module.durationHours }} {{ 'Hours' | translate }} </span></h1>
+						</ion-col>
+            <ion-col>
+              <h1 style="float:right;"><ion-icon name="book"></ion-icon> </h1>
+            </ion-col>
+					</ion-row>
+          <ion-row>
+						<ion-col size=12>
+							<h2 class="moduleName"><b>{{ module.moduleName | translate }}</b></h2>
+              <h2>{{ 'Room' | translate }}: {{ module.roomNumber }}</h2>
+              <h2>{{ 'Lecturer' | translate }}:  {{ module.lecturerName }} </h2>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-content padding *ngIf="!viewByDay">
+	<button ion-button class="viewButton" (click)="changeView()"> {{ 'Filter by day' | translate }}</button>
+	<ion-item>
+		<ion-label>{{ 'Room' | translate }}</ion-label>
+		<ion-select class="roomDropdown" placeholder="150" multiple="false" (ionChange)="changeRoomNumber($event)">
+			<ion-option *ngFor="let room of roomNumbers">{{room}}</ion-option>
+		</ion-select>
+	</ion-item>
+	<ion-list>
+		<ion-item *ngFor="let module of modulesByRoom">
+			<ion-card>
+				<ion-grid>
+					<ion-row class="module-title">
+						<ion-col size=10 class="time">
+							<h1> {{ module.day | translate }} {{ module.time }} <span class="duration">{{ module.durationHours }} {{ 'Hours' | translate }} </span> </h1>
+						</ion-col>
+            <ion-col>
+              <h1 style="float:right;"><ion-icon name="book"></ion-icon> </h1>
+            </ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col size=12>
+							<h2><b>{{ module.moduleName | translate }}</b></h2>
+							<h4 class="roomNumber">{{ 'Room' | translate }} {{ module.roomNumber }}</h4>
+							<h2>{{ 'Lecturer' | translate }}: {{ module.lecturerName }}</h2>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card>
+		</ion-item>
+	</ion-list>
+
+</ion-content>
