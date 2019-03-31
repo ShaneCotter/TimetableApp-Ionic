@@ -1,6 +1,6 @@
 <ion-header>
 	<ion-navbar>
-		<ion-title> {{ 'College Timetable' | translate }} <ion-icon name="school"></ion-icon></ion-title>
+		<ion-title style="float:left;"> {{ 'College Timetable' | translate }}</ion-title>
     <ion-select style = "float: right;" [(ngModel)]="languageSelected" (ionChange)="setLanguage()">
   	   <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.name}}</ion-option>
   	</ion-select>
@@ -9,11 +9,11 @@
 
 <ion-content padding *ngIf="viewByDay">
 
-	<button ion-button class="viewButton" (tap)="changeView()"> {{ 'RoomFilter' | translate }} </button>
+	<button ion-button class="viewButton" (click)="changeView()"> {{ 'RoomFilter' | translate }} </button>
 	<h1 class="page-title" *ngIf="modulesByDay">
-		<ion-icon name="arrow-back" (tap)="getPreviousDay()" class="arrow-left"></ion-icon>
+		<ion-icon name="arrow-back" (click)="getPreviousDay()" class="arrow-left"></ion-icon>
 		{{ modulesByDay[0].day | translate }}
-		<ion-icon name="arrow-forward" (tap)="getNextDay()" class="arrow-right"></ion-icon>
+		<ion-icon name="arrow-forward" (click)="getNextDay()" class="arrow-right"></ion-icon>
 	</h1>
 	<ion-list>
 		<ion-item *ngFor="let module of modulesByDay">
@@ -50,7 +50,7 @@
 	</ion-item>
 	<ion-list>
 		<ion-item *ngFor="let module of modulesByRoom">
-			<ion-card>
+			<ion-card text-wrap>
 				<ion-grid>
 					<ion-row class="module-title">
 						<ion-col size=10 class="time">
@@ -73,3 +73,4 @@
 	</ion-list>
 
 </ion-content>
+

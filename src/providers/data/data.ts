@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 export class DataProvider {
 
   constructor(public http: Http) {
-    console.log('Hello DataProvider Provider');
   }
 
   getModules() {
@@ -36,7 +35,8 @@ export class DataProvider {
         //This case will ensure Monday is shown on the weekend
         dayString = "Monday";
     }
-    console.log('call made');
+    //For debugging
+    //console.log('call made');
     return this.http.get('https://ca2-timetableapi.azurewebsites.net/api/Timetable/getTimeslotsByDay/' + dayString)
       .map(response => response.json());
   }

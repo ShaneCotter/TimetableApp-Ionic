@@ -42,7 +42,6 @@ export class HomePage {
       }, (err) => {
         alert("failed loading json data");
       })
-    console.log(this.allModules);
   }
 
   getRoomNumbers() {
@@ -102,13 +101,10 @@ export class HomePage {
     if (this.viewByDay == true) {
       this.viewByDay = false;
       this.getRoomNumbers();
-      console.log(this.roomNumbers);
     }
     else {
       this.viewByDay = true;
-      console.log(this.modulesByDay);
     }
-    console.log(this.allModules);
   }
 
   changeRoomNumber($event) {

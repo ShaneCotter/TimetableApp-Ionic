@@ -92,11 +92,7 @@ $toolbar-background: #3D9BDD;
 ion-title {
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 0 90px 1px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+  padding-top: 1em;
 }
 
 ion-navbar{
@@ -106,7 +102,7 @@ ion-navbar{
 }
 
 .toolbar-title{
-  font-size: 22.5px !important;
+  font-size: 20px !important;
 }
 
 .page-title{
